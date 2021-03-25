@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
 
     .categories{
         display: flex;
+        margin:20px;
     }
 
     .input-group{
@@ -16,6 +17,10 @@ export const HomeContainer = styled.div`
 
     .joker{
         display: block;
+    }
+
+    .img img{
+        width: 10px;
     }
 
 `

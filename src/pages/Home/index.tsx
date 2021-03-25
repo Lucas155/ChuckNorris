@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import LoadGif from '../../img/giphy.gif';
+import Chuck from '../../img/CHUCKNORRIS.gif';
 import { HomeContainer } from './style';
 import api from '../../service/api';
 
@@ -50,6 +51,8 @@ const Home: React.FC = () => {
 
     return (
         <HomeContainer>
+            <h2>Categories</h2>
+            
             <div className="categories">
                 <ul>
                 { categoriesJoke.map( (joke, index) => (
@@ -57,17 +60,14 @@ const Home: React.FC = () => {
                 ))}
                 </ul>
             </div>
-            <div className="group-categorias">
-                <img src={categorySelected?.icon_url} alt={categorySelected?.value}/>
-                <h3>{categorySelected?.value}</h3>
-            </div>  
 
             <div className="input-group">
             <h2>Find Joke</h2>
                 <input type="text" onChange={ e => setSearchJoke(e.target.value)} />
                 <button type="submit" onClick={handleJokes}> Find joke</button>
+
             </div>
-            <p>Find results for:</p>
+            <h1>Find results for:</h1>
             <div className="joker">
                 { isLoad ? <img src={LoadGif} alt="load"/> : resultSearch.map( result => (
                     <div key={result.id}>
@@ -78,9 +78,12 @@ const Home: React.FC = () => {
 
 
             </div>
+            <div className="group-categorias">
+                <img src={categorySelected?.icon_url} alt={categorySelected?.value}/>
+                <h3>{categorySelected?.value}</h3>
+            </div>  
             
-            
-
+        
         </HomeContainer>
     );
 }

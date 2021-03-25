@@ -7,7 +7,7 @@ export default createGlobalStyle`
         
     }
     body{
-        background: #cccc;
+        background: #A9A9A9;
         font-family: 'Chango', cursive;
     }
 
