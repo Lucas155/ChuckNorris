@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import LoadGif from '../../img/giphy.gif';
-import Chuck from '../../img/CHUCKNORRIS.gif';
 import { HomeContainer } from './style';
 import api from '../../service/api';
 
